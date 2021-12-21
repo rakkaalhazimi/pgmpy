@@ -314,6 +314,8 @@ class HillClimbSearch(StructureEstimator):
                 key=lambda t: t[1],
                 default=(None, None),
             )
+            
+            print(f"[{self.__class__.__name__}] BIC score: {best_score_delta} at {_} iterations")
 
             if best_operation is None or best_score_delta < epsilon:
                 break
